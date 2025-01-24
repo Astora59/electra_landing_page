@@ -6,7 +6,12 @@ body {
     max-width: 1440px;
     margin: 0 auto;
 }
-
+.mainContent {
+    display: flex;
+    flex-direction: column;
+    gap: 70px;
+    padding: 10px;
+}
 .navbar {
     display: flex;
     flex-direction: row;
@@ -105,3 +110,41 @@ body {
     color: black;
     cursor: pointer;
   }
+
+.partnersSection {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+}
+
+.carousel-container {
+    height: 500px;
+    width: 200px;
+    overflow: hidden;  /* Cache les images en dehors du conteneur */
+}
+
+.carousel {
+  display: flex;
+  flex-direction: column;
+ 
+}
+
+.carousel-image {
+  width: 100%;
+  height: auto;
+}
+
+@keyframes slide {
+  0%, 25% {
+      transform: translateY(0);
+  }
+  50%, 75% {
+      transform: translateY(-100%);
+  }
+  100% {
+      transform: translateY(-200%);
+  }
+}
+
