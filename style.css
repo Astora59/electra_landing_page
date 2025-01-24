@@ -36,3 +36,72 @@ body {
     justify-content: flex-start;
     
 }
+
+/* call to Action */
+
+.callToAction {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+}
+
+.callToActionTitle {
+    font-size: 48px;
+    font-weight: 400;
+    font-family: "manrope", sans-serif;
+    display: inline-block;
+    position: relative;
+    color: white; /* Texte blanc initial */
+    font-weight: bold;
+    cursor: pointer;
+    overflow: hidden; /* Empêche le débordement de l'animation*/
+}
+
+.callToActionTitle::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-color: white; /* Couleur du surlignage */
+    transform: scaleX(0); /* Surlignage initial non visible */
+    transform-origin: left;
+    transition: transform 0.4s ease;
+    z-index: -1; /* Place l'effet derrière le texte */
+}
+
+/* Changement de couleur au survol */
+.callToActionTitle:hover {
+    color: black; /* Change la couleur du texte en noir */
+  }
+  
+  /* Animation de surlignage au survol */
+  .callToActionTitle:hover::before {
+    transform: scaleX(1); /* Étend le surlignage horizontalement */
+  }
+  
+
+  /*button call to action */
+
+  .buttonsLayout {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+  }
+  
+  .buttonCalltoAction {
+    color: white;
+    background-color: black;
+    border: 1px solid white;
+    padding: 10px 20px;
+  }
+
+  .buttonCalltoAction:hover {
+    background-color: white;
+    color: black;
+    cursor: pointer;
+  }
